@@ -35,19 +35,21 @@ public class Main {
             Connection con = DBConnection.getInstance().getDBConnection();
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("select * from user natural join user_details natural join user_experience where username = '"+userName+"' AND password = '"+password+"'");
+            if (rs.next() == false)
+                System.out.println("User or password is wrong");
+            else {
+                    user.setFullName(rs.getString(2));
+                    user.setUserName(rs.getString(3));
+                    user.setPassword(rs.getString(4));
+                    user.setPhone(rs.getString(5));
+                    user.setEmail(rs.getString(6));
+                    user.setAddress(rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10));
+                    user.setDetails(rs.getString(11), rs.getString(12), rs.getString(13), rs.getString(14));
+                    user.setExperience(rs.getString(15), rs.getString(16));
 
-            while (rs.next()) {
-                user.setFullName(rs.getString(2));
-                user.setUserName(rs.getString(3));
-                user.setPassword(rs.getString(4));
-                user.setPhone(rs.getString(5));
-                user.setEmail(rs.getString(6));
-                user.setAddress(rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10));
-                user.setDetails(rs.getString(11), rs.getString(12), rs.getString(13), rs.getString(14));
-                user.setExperience(rs.getString(15), rs.getString(16));
+                System.out.println(json.toJson(user));
             }
 
-            System.out.println(json.toJson(user));
 
             /*ResultSet rs = stmt.executeQuery("select * from user");
             while (rs.next()) {
