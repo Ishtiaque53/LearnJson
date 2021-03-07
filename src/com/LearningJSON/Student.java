@@ -10,6 +10,8 @@ public class Student {
     private String email;
 
     Address address = new Address();
+    Details details = new Details();
+    Experience experience = new Experience();
 
     public void setAddress(String street, String city, String area, String country) {
 
@@ -20,6 +22,26 @@ public class Student {
     }
     public Address getAddress() {
         return address;
+    }
+
+    public void setDetails(String favouriteColour, String favouriteGame, String favouriteFood, String favouriteMovie) {
+
+        details.favouriteColour = favouriteColour;
+        details.favouriteGame = favouriteGame;
+        details.favouriteFood = favouriteFood;
+        details.favouriteMovie = favouriteMovie;
+    }
+    public Details getDetails() {
+        return details;
+    }
+
+    public void setExperience(String service, String study) {
+
+        experience.service = service;
+        experience.study = study;
+    }
+    public Experience getExperience() {
+        return experience;
     }
 
     /*public void setInfo(){
