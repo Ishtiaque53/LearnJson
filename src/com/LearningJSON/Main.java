@@ -35,7 +35,7 @@ public class Main {
             Connection con = DBConnection.getInstance().getDBConnection();
             Statement stmt = con.createStatement();
             ResultSet rs = stmt.executeQuery("select * from user natural join user_details natural join user_experience where username = '"+userName+"' AND password = '"+password+"'");
-            if (rs.next() == false)
+            if (!rs.next())
                 System.out.println("User or password is wrong");
             else {
                     user.setFullName(rs.getString(2));
