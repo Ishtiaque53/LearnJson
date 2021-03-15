@@ -1,8 +1,6 @@
 package com.LearningJSON;
 
 
-import java.util.Scanner;
-
 public class StudentProfileDetails {
 
     private int studentId;
@@ -10,6 +8,7 @@ public class StudentProfileDetails {
 
 
     Address address = new Address();
+
 
     //All the set methods
     public void setStudentId(int studentId){

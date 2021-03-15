@@ -1,7 +1,5 @@
 package com.LearningJSON;
 
-import java.util.Scanner;
-
 public class Student {
     private String fullName;
     private String userName;
@@ -9,19 +7,19 @@ public class Student {
     private String phone;
     private String email;
 
-    Address address = new Address();
+    PreviousAddress previousAddress = new PreviousAddress();
     Details details = new Details();
     Experience experience = new Experience();
 
     public void setAddress(String street, String city, String area, String country) {
 
-        address.street = street;
-        address.city = city;
-        address.area = area;
-        address.country = country;
+        previousAddress.street = street;
+        previousAddress.city = city;
+        previousAddress.area = area;
+        previousAddress.country = country;
     }
-    public Address getAddress() {
-        return address;
+    public PreviousAddress getAddress() {
+        return previousAddress;
     }
 
     public void setDetails(String favouriteColour, String favouriteGame, String favouriteFood, String favouriteMovie) {

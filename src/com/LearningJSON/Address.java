@@ -1,37 +1,46 @@
 package com.LearningJSON;
 
+import java.util.Scanner;
+
 public class Address {
-    public String street;
-    public String city;
-    public String area;
-    public String country;
+    private String village;
+    private String postOffice;
+    private String thana;
+    private String zilla;
+    private String country;
 
-   /* public void setStreet(String street) {
-        this.street = street;
+    //all the get methods
+    public void setVillage(String village){
+        this.village = village;
     }
-    public String getStreet() {
-        return street;
+    public void setPostOffice(String postOffice){
+        this.postOffice= postOffice;
     }
-
-    public void setCity(String city) {
-        this.city = city;
+    public void setThana(String thana){
+        this.thana = thana;
     }
-    public String getCity() {
-        return city;
+    public void setZilla(String zilla){
+        this.zilla = zilla;
     }
-
-    public void setArea(String area) {
-        this.area = area;
-    }
-    public String getArea() {
-        return area;
-    }
-
-    public void setCountry(String country) {
+    public void setCountry(String country){
         this.country = country;
     }
-    public String getCountry() {
+
+    //all the get methods
+    public String getVillage(){
+        return village;
+    }
+    public String getPostOffice(){
+        return postOffice;
+    }
+    public String getThana(){
+        return thana;
+    }
+    public String getZilla(){
+        return zilla;
+    }
+    public String getCountry(){
         return country;
-    }*/
+    }
 
 }
